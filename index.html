@@ -24,6 +24,28 @@ body {
   padding: 22px 14px;
 }
 
+.visit-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 18px;
+  padding: 10px 16px;
+  background: #130708;
+  border: 1px solid #a8794a;
+  border-radius: 14px;
+  color: #e8c68b;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.visit-counter img {
+  height: 25px;
+  max-width: 150px;
+}
+
 .page {
   width: 100%;
   max-width: 650px;
@@ -180,6 +202,16 @@ body {
 </head>
 
 <body>
+
+<!-- عداد الزيارات -->
+<div class="visit-counter">
+  <span>👁️ زيارات الموقع</span>
+  <img
+    src="https://hits.sh/ben5k.github.io/ben.svg?style=for-the-badge&label=VISITS&color=210a0e&labelColor=100506"
+    alt="عداد زيارات الموقع"
+  >
+</div>
+
 <main class="page">
 
   <header class="topbar">
@@ -192,7 +224,6 @@ body {
       class="hero-image"
       src="https://g.top4top.io/p_3937nge9b0.png"
       alt="Ben anime character"
-      onerror="this.alt='تعذر تحميل الصورة';"
     >
 
     <h1 class="name">Ben</h1>
