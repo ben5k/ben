@@ -3,7 +3,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#100707">
 <title>طحبح | T7B7 ON TOP</title>
 
@@ -11,164 +11,446 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
 
 :root {
-  --bg:#100707;
-  --panel:#1c1010;
-  --red:#ff432e;
-  --orange:#ffb34f;
-  --white:#fff7ef;
-  --muted:#b9a9a9;
+  --bg: #100707;
+  --panel: #1c1010;
+  --red: #ff432e;
+  --orange: #ffb34f;
+  --white: #fff7ef;
+  --muted: #b9a9a9;
 }
 
-* {box-sizing:border-box;margin:0;padding:0}
-html {scroll-behavior:smooth}
-body {
-  background:radial-gradient(ellipse at top right,#ff432e24,transparent 40%),var(--bg);
-  color:var(--white);
-  font-family:'Cairo',sans-serif;
-  min-height:100vh;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-a {color:inherit;text-decoration:none}
-.container {max-width:1100px;width:100%;margin:auto;padding:18px}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(ellipse at top right, #ff432e24, transparent 40%), var(--bg);
+  color: var(--white);
+  font-family: 'Cairo', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  padding: 18px;
+}
 
 /* الشريط العلوي */
+
 nav {
-  display:flex;align-items:center;justify-content:space-between;
-  gap:12px;margin-bottom:20px
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
 }
-.brand {display:flex;align-items:center;gap:10px}
-.brand img {width:48px;height:48px;object-fit:contain;border-radius:12px}
-.logo {font-size:24px;font-weight:900;color:var(--orange)}
-.logo span {color:var(--red)}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--orange);
+}
+
+.logo span {
+  color: var(--red);
+}
+
 .nav-tag {
-  background:#211212;border:1px solid #613026;
-  padding:8px 13px;border-radius:30px;font-size:12px
+  background: #211212;
+  border: 1px solid #613026;
+  padding: 8px 13px;
+  border-radius: 30px;
+  font-size: 12px;
 }
 
 /* البنر الرئيسي */
+
 .hero {
-  position:relative;overflow:hidden;min-height:470px;
-  border:1px solid #603027;border-radius:25px;
-  display:flex;align-items:flex-end;padding:30px;
-  background:#180b0b;
-  box-shadow:0 15px 60px #0008;
+  position: relative;
+  overflow: hidden;
+  min-height: 470px;
+  border: 1px solid #603027;
+  border-radius: 25px;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  background: #180b0b;
+  box-shadow: 0 15px 60px #0008;
 }
+
 .hero::before {
-  content:"";position:absolute;inset:0;
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
-    linear-gradient(0deg,#100707 0%,#100707c9 35%,#10070715 100%),
+    linear-gradient(0deg, #100707 0%, #100707c9 35%, #10070715 100%),
     url("https://d.top4top.io/p_3946lxchb1.jpg") center/cover no-repeat;
-  z-index:0;
+  z-index: 0;
 }
-.hero-content {position:relative;z-index:1;width:100%}
+
+.corner-logo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  z-index: 3;
+  border-radius: 12px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
 .main-logo {
-  display:block;width:100px;height:100px;
-  object-fit:contain;margin-bottom:12px;
-  filter:drop-shadow(0 0 15px #ff432e55);
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 15px #ff432e55);
 }
+
 .badge {
-  display:inline-block;color:var(--orange);
-  border:1px solid #693329;background:#170b0be8;
-  padding:7px 13px;border-radius:30px;
-  font-size:11px;font-weight:800
+  display: inline-block;
+  color: var(--orange);
+  border: 1px solid #693329;
+  background: #170b0be8;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
 }
+
 h1 {
-  font-size:clamp(48px,10vw,82px);
-  line-height:1.2;margin:12px 0 0;font-weight:900;
-  background:linear-gradient(100deg,#fff,var(--orange),var(--red));
-  -webkit-background-clip:text;background-clip:text;color:transparent
+  font-size: clamp(48px, 10vw, 82px);
+  line-height: 1.2;
+  margin: 12px 0 0;
+  font-weight: 900;
+  background: linear-gradient(100deg, #fff, var(--orange), var(--red));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
 .subtitle {
-  color:var(--orange);direction:ltr;text-align:right;
-  font-size:18px;font-weight:900;letter-spacing:3px
+  color: var(--orange);
+  direction: ltr;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 3px;
 }
+
 .description {
-  color:#dfcece;line-height:2;margin:13px 0 20px;
-  font-size:14px;max-width:570px
+  color: #dfcece;
+  line-height: 2;
+  margin: 13px 0 20px;
+  font-size: 14px;
+  max-width: 570px;
 }
-.buttons {display:flex;gap:10px;flex-wrap:wrap}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .btn {
-  display:inline-block;padding:12px 18px;border-radius:12px;
-  font-size:13px;font-weight:900;border:1px solid #64342b;
-  background:#211212;transition:.2s
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 900;
+  border: 1px solid #64342b;
+  background: #211212;
+  transition: .2s;
 }
-.btn:hover {transform:translateY(-3px)}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
 .btn-primary {
-  color:#160a07;background:linear-gradient(100deg,var(--orange),var(--red));
-  border:none
+  color: #160a07;
+  background: linear-gradient(100deg, var(--orange), var(--red));
+  border: none;
 }
 
-/* العداد */
-.stats {margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+/* بطاقات المعلومات */
+
+.stats {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .stat {
-  padding:10px 16px;border:1px solid #563027;
-  background:#130909e8;border-radius:12px;min-width:140px
+  padding: 10px 16px;
+  border: 1px solid #563027;
+  background: #130909e8;
+  border-radius: 12px;
+  min-width: 140px;
 }
-.stat strong {display:block;color:var(--orange);font-size:23px}
-.stat small {color:var(--muted);font-size:11px}
-.counter-status {display:block;font-size:10px;color:var(--muted);margin-top:3px}
 
-/* الأقسام */
-.section-head {margin:35px 0 15px}
-.section-head h2 {font-size:24px}
-.section-head p {color:var(--muted);font-size:13px}
+.stat strong {
+  display: block;
+  color: var(--orange);
+  font-size: 23px;
+}
+
+.stat small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* قسم التواصل */
+
+.section-head {
+  margin: 35px 0 15px;
+}
+
+.section-head h2 {
+  font-size: 24px;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 13px;
+}
 
 .socials {
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
 }
+
 .social {
-  display:flex;flex-direction:column;gap:9px;padding:17px;
-  min-height:150px;border:1px solid #563027;border-radius:17px;
-  background:linear-gradient(145deg,#211212,#100b0b);transition:.2s
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 17px;
+  min-height: 150px;
+  border: 1px solid #563027;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #211212, #100b0b);
+  transition: .2s;
 }
-.social:hover {transform:translateY(-4px);border-color:var(--orange)}
+
+.social:hover {
+  transform: translateY(-4px);
+  border-color: var(--orange);
+}
+
 .social-icon {
-  width:43px;height:43px;display:grid;place-items:center;
-  border-radius:12px;background:#ff432e12;border:1px solid #563027;
-  font-size:23px
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #ff432e12;
+  border: 1px solid #563027;
+  font-size: 23px;
 }
-.social h3 {font-size:16px;direction:ltr;text-align:right}
-.social p {color:var(--muted);font-size:11px}
-.social b {color:var(--orange);font-size:12px;margin-top:auto}
+
+.social h3 {
+  font-size: 16px;
+  direction: ltr;
+  text-align: right;
+}
+
+.social p {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.social b {
+  color: var(--orange);
+  font-size: 12px;
+  margin-top: auto;
+}
+
+/* قسم التطبيق */
 
 .app {
-  margin-top:28px;padding:25px;border:1px solid #653127;
-  border-radius:20px;background:linear-gradient(120deg,#241010,#110a0a)
+  position: relative;
+  margin-top: 28px;
+  padding: 25px;
+  border: 1px solid #653127;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #241010, #110a0a);
+  min-height: 155px;
+  overflow: hidden;
 }
-.app-label {color:var(--orange);font-size:11px;font-weight:900;letter-spacing:2px;direction:ltr}
-.app h2 {font-size:27px;margin:10px 0}
-.app p {color:#d4c3c3;line-height:2;font-size:13px}
-.coming-soon {
-  display:inline-block;margin-top:15px;padding:8px 13px;
-  border:1px solid var(--red);border-radius:30px;
-  color:var(--orange);font-size:12px;font-weight:800
-}
-.about {
-  margin-top:15px;padding:22px;border:1px solid #563027;
-  border-radius:18px;background:#1c1010
-}
-.about h3 {font-size:21px;margin-bottom:8px}
-.about p {color:var(--muted);font-size:13px;line-height:2}
-footer {
-  text-align:center;margin-top:30px;padding:20px 0;
-  border-top:1px solid #3e2420;color:var(--muted);font-size:12px
-}
-footer strong {color:var(--orange)}
 
-@media(max-width:700px) {
-  .container {padding:12px}
-  .hero {min-height:490px;padding:22px}
+.app-label {
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  direction: ltr;
+}
+
+.app h2 {
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+.app p {
+  color: #d4c3c3;
+  line-height: 2;
+  font-size: 13px;
+}
+
+.coming-soon {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 13px;
+  border: 1px solid var(--red);
+  border-radius: 30px;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.app-logo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* نبذة الموقع */
+
+.about {
+  margin-top: 15px;
+  padding: 22px;
+  border: 1px solid #563027;
+  border-radius: 18px;
+  background: #1c1010;
+}
+
+.about h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.about p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* نهاية الموقع */
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #3e2420;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer strong {
+  color: var(--orange);
+}
+
+/* توافق الجوال */
+
+@media (max-width: 700px) {
+  .container {
+    padding: 12px;
+  }
+
+  .hero {
+    min-height: 490px;
+    padding: 22px;
+  }
+
   .hero::before {
     background:
-      linear-gradient(0deg,#100707 0%,#100707c9 40%,#10070710 100%),
-      url("https://d.top4top.io/p_3946lxchb1.jpg") center/cover no-repeat
+      linear-gradient(0deg, #100707 0%, #100707c9 40%, #10070710 100%),
+      url("https://d.top4top.io/p_3946lxchb1.jpg") center/cover no-repeat;
   }
-  h1 {font-size:60px}
-  .main-logo {width:85px;height:85px}
-  .socials {grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-  .social {padding:13px;min-height:145px}
-  .section-head h2 {font-size:21px}
-  .app {padding:18px}
-  .app h2 {font-size:23px}
+
+  .corner-logo {
+    width: 62px;
+    height: 62px;
+    top: 12px;
+    right: 12px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .main-logo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .socials {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .social {
+    padding: 13px;
+    min-height: 145px;
+  }
+
+  .section-head h2 {
+    font-size: 21px;
+  }
+
+  .app {
+    padding: 18px;
+    padding-top: 85px;
+  }
+
+  .app h2 {
+    font-size: 23px;
+  }
+
+  .app-logo {
+    right: 18px;
+    top: 15px;
+    width: 58px;
+    height: 58px;
+  }
 }
 </style>
 </head>
@@ -178,23 +460,28 @@ footer strong {color:var(--orange)}
 
 <nav>
   <div class="brand">
-    <img src="https://c.top4top.io/p_3946wq2670.png"
-         alt="شعار طحبح"
-         onerror="this.style.display='none'">
+    <img src="https://c.top4top.io/p_3946wq2670.png" alt="شعار طحبح">
     <div class="logo">طحبح <span>T7B7</span></div>
   </div>
   <div class="nav-tag">🔥 الموقع الرسمي</div>
 </nav>
 
 <section class="hero">
+
+  <img class="corner-logo"
+       src="https://c.top4top.io/p_3946wq2670.png"
+       alt="شعار طحبح">
+
   <div class="hero-content">
+
     <img class="main-logo"
          src="https://e.top4top.io/p_3946kg3qr2.jpg"
-         alt="لوجو T7B7"
-         onerror="this.style.display='none'">
+         alt="لوجو T7B7">
 
     <span class="badge">WELCOME TO T7B7</span>
+
     <h1>طحبح</h1>
+
     <div class="subtitle">T7B7 ON TOP</div>
 
     <p class="description">
@@ -206,33 +493,42 @@ footer strong {color:var(--orange)}
     <div class="buttons">
       <a class="btn btn-primary"
          href="https://discord.gg/8abFXWazw"
-         target="_blank" rel="noopener">انضم للديسكورد</a>
+         target="_blank" rel="noopener">
+        انضم للديسكورد
+      </a>
 
-      <a class="btn" href="#socials">حساباتي الرسمية</a>
+      <a class="btn" href="#socials">
+        حساباتي الرسمية
+      </a>
     </div>
 
     <div class="stats">
+
       <div class="stat">
-        <strong id="visits">2000</strong>
-        <small>إجمالي زيارات الموقع</small>
-        <span class="counter-status" id="counterStatus">جارٍ تحميل العداد...</span>
+        <strong>100 👥</strong>
+        <small>مستخدمو السكربتات يوميًا</small>
       </div>
+
       <div class="stat">
         <strong>🔥 T7B7</strong>
         <small>ON TOP</small>
       </div>
+
     </div>
   </div>
 </section>
 
 <section id="socials">
+
   <div class="section-head">
     <h2>حساباتي الرسمية</h2>
     <p>تابع طحبح على منصات التواصل الاجتماعي.</p>
   </div>
 
   <div class="socials">
-    <a class="social" href="https://discord.gg/8abFXWazw"
+
+    <a class="social"
+       href="https://discord.gg/8abFXWazw"
        target="_blank" rel="noopener">
       <div class="social-icon">🎮</div>
       <h3>Discord</h3>
@@ -240,7 +536,8 @@ footer strong {color:var(--orange)}
       <b>دخول المجتمع ←</b>
     </a>
 
-    <a class="social" href="https://youtube.com/@gqj2"
+    <a class="social"
+       href="https://youtube.com/@gqj2"
        target="_blank" rel="noopener">
       <div class="social-icon">▶️</div>
       <h3>YouTube</h3>
@@ -248,7 +545,8 @@ footer strong {color:var(--orange)}
       <b>زيارة القناة ←</b>
     </a>
 
-    <a class="social" href="https://www.tiktok.com/@bir.y5"
+    <a class="social"
+       href="https://www.tiktok.com/@bir.y5"
        target="_blank" rel="noopener">
       <div class="social-icon">🎵</div>
       <h3>TikTok</h3>
@@ -256,24 +554,34 @@ footer strong {color:var(--orange)}
       <b>زيارة الحساب ←</b>
     </a>
 
-    <a class="social" href="https://t.me/Ben_5k"
+    <a class="social"
+       href="https://t.me/Ben_5k"
        target="_blank" rel="noopener">
       <div class="social-icon">✈️</div>
       <h3>Telegram</h3>
       <p>تابع آخر الأخبار</p>
       <b>فتح القناة ←</b>
     </a>
+
   </div>
 </section>
 
 <section class="app">
+
+  <img class="app-logo"
+       src="https://c.top4top.io/p_3946wq2670.png"
+       alt="شعار طحبح">
+
   <div class="app-label">COMING SOON</div>
+
   <h2>تطبيق طحبح 🔥</h2>
+
   <p>
     نعمل على تجهيز تجربة جديدة تجمع محتوى مابات روبلوكس
     والتحديثات والمشاريع القادمة في مكان واحد.
     تابع حساباتنا لمعرفة موعد الإطلاق.
   </p>
+
   <span class="coming-soon">قريباً إن شاء الله</span>
 </section>
 
@@ -287,81 +595,10 @@ footer strong {color:var(--orange)}
 
 <footer>
   © 2026 <strong>طحبح | T7B7 ON TOP</strong>
-  <br>Gaming • Anime • Community
+  <br>
+  Gaming • Anime • Community
 </footer>
 
 </main>
-
-<script>
-/*
-  عداد مشترك لجميع الزوار باستخدام CounterAPI V2.
-  يبدأ العرض من 2000 ثم يضيف قيمة العداد المشترك.
-  يلزم إنشاء Workspace وAPI Token في CounterAPI.
-*/
-
-const COUNTER_WORKSPACE = "PUT_YOUR_WORKSPACE_HERE";
-const COUNTER_NAME = "t7b7-visitors";
-const COUNTER_API_KEY = "PUT_YOUR_API_KEY_HERE";
-const START_COUNT = 2000;
-
-const counterDisplay = document.getElementById("visits");
-const counterStatus = document.getElementById("counterStatus");
-
-async function countVisit() {
-  const notConfigured =
-    COUNTER_WORKSPACE.startsWith("PUT_") ||
-    COUNTER_API_KEY.startsWith("PUT_");
-
-  if (notConfigured) {
-    counterDisplay.textContent = START_COUNT.toLocaleString("en-US");
-    counterStatus.textContent = "يلزم إعداد العداد المشترك";
-    return;
-  }
-
-  try {
-    const url =
-      "https://api.counterapi.dev/v2/" +
-      encodeURIComponent(COUNTER_WORKSPACE) + "/" +
-      encodeURIComponent(COUNTER_NAME) + "/up";
-
-    const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        "Authorization": "Bearer " + COUNTER_API_KEY
-      },
-      cache: "no-store"
-    });
-
-    if (!response.ok) {
-      throw new Error("Counter API error: " + response.status);
-    }
-
-    const result = await response.json();
-
-    // قراءة القيمة من استجابة الخدمة
-    const data = result.data || result;
-    const total = Number(
-      data.value ?? data.count ?? data.up_count
-    );
-
-    if (!Number.isFinite(total)) {
-      throw new Error("لم يتم العثور على قيمة العداد");
-    }
-
-    counterDisplay.textContent =
-      (START_COUNT + total).toLocaleString("en-US");
-
-    counterStatus.textContent = "عداد الزيارات المشترك";
-
-  } catch (error) {
-    console.error("Counter error:", error);
-    counterStatus.textContent = "تعذّر تحديث العداد";
-  }
-}
-
-// يزيد مرة عند تحميل الصفحة، وليس عند تحديث شكل العداد
-countVisit();
-</script>
-
 </body>
 </html>
